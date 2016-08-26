@@ -1,4 +1,2 @@
-import chapter01.nsfg as nsfg
-df = nsfg.ReadFemPreg()
-pregordr = df[df.columns[1]]
-print(pregordr)
+for line in open("2002FemPreg.dct"):
+    print(' '.join(line.strip().split()[4:]).lower().capitalize(), "$")
