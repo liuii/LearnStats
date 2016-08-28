@@ -50,3 +50,10 @@ Temporary Items
 .idea
 *.pyc
 
+# other filetypes
+*.xlsx
+*.xls
+*.docx
+*.doc
+*.csv
+
