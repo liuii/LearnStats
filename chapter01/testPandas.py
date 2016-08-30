@@ -1,10 +1,12 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+import re
 
-ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
-ts = ts.cumsum()
-df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index, columns=list('ABCD'))
-df = df.cumsum()
-df.to_excel('foo.xlsx', sheet_name='Sheet1')
+p = re.compile(r'(\w+) (\w+)')
+s = 'i say, hello world!'
+
+print(p.subn(r'\2 \1', s))
+
+def func(m):
+    return m.group(1).title() + ' ' + m.group(2).title()
+
+print(p.subn(func, s))
 

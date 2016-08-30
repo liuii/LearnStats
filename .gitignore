@@ -48,6 +48,7 @@ Temporary Items
 
 # pyCharm Dir
 .idea
+.ipynb_checkpoints
 *.pyc
 
 # other filetypes
